@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sign-up.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Sign-in</title> 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="sign-up.js"></script>
+    
+    
+    </head>
+    <body>
+      <main class="registration-container">
+        <button class="back-button" onclick="history.back()">
+          <svg width="117" height="55" viewBox="0 0 117 55" fill="none" xmlns="http://www.w3.org/2000/svg" class="back-icon">
+            <rect width="117" height="55" rx="15" fill="#D7D6DC"></rect>
+            <text fill="black" xml:space="preserve" style="white-space: pre" font-family="Space Grotesk" font-size="20" font-weight="300" letter-spacing="0px">
+              <tspan x="58" y="33.92">Back</tspan>
+            </text>
+            <path d="M20.2929 26.2929C19.9024 26.6834 19.9024 27.3166 20.2929 27.7071L26.6569 34.0711C27.0474 34.4616 27.6805 34.4616 28.0711 34.0711C28.4616 33.6805 28.4616 33.0474 28.0711 32.6569L22.4142 27L28.0711 21.3431C28.4616 20.9526 28.4616 20.3195 28.0711 19.9289C27.6805 19.5384 27.0474 19.5384 26.6569 19.9289L20.2929 26.2929ZM50 26L21 26V28L50 28V26Z" fill="black"></path>
+          </svg>
+        </button>
+        
+        <section class="registration-content">
+          <h1 class="welcome-heading">Welcome To SALAHLi</h1>
+          <pre class="welcome-subtext">Join a community of experts and start offering
+            your repair services</pre>
+            
+            <form class="registration-form" id="registrationForm" novalidate>
+              <div class="input-container">
+              <input type="text" placeholder="Full name" class="form-input" id="fullName" required>
+              <div class="error-message">Please enter your full name</div>
+            </div>
+            
+            <!-- <div class="input-container">
+              <input type="date" placeholder="DD/MM/YY" class="form-input" id="birthdate" required>
+              <div class="error-message">Please enter a valid date</div>
+            </div> -->
+            
+            <div class="input-container">
+              <input type="tel" placeholder="Phone number" class="form-input" id="phone" required pattern="[0-9]{10,15}">
+              <div class="error-message">Please enter a valid phone number</div>
+            </div>
+            
+            <div class="input-container">
+              <input type="email" placeholder="Email" class="form-input" id="email" required>
+              <div class="error-message">Please enter a valid email address</div>
+            </div>
+            
+            <!-- <div class="input-container address-container">
+              <input type="text" placeholder="Address" class="form-input" id="address" required>
+              <div class="error-message">Please enter your address</div>
+            </div> -->
+            
+            <div class="input-container password-container">
+              <input type="password" placeholder="Password" class="form-input" id="password" required minlength="8">
+              <button type="button" class="password-toggle" data-target="password" onclick="pass_text()">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+    
+            <div class="password-strength">
+              <div class="password-strength-bar"></div>
+            </div>
+            <div class="strength-text">Password strength: <span id="strengthText">None</span></div>
+            
+            <button type="submit" class="join-button">Join</button>
+            
+            <div class="login-link">
+              <span>Already have an account?</span>
+              <a href="../log-in/index.html">Log in</a>
+            </div>
+          </form>
+          
+          <img src="../images/1c34dbfb5f0a0f8577177339f2c0c97ce673dd11.jpg" alt="Repair expert at work" class="hero-image">
+        </section>
+      </main>
+      
+      <script src="sign-up.js"></script>
+    </body>
+    </html>
+  
+    
+

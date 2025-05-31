@@ -1,0 +1,304 @@
+      /* Base styles and reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: none;
+        outline: none;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        min-height: 100vh;
+        width: 100%;
+      }
+
+      /* Main container with gradient background */
+      .password-reset-container {
+        display: flex;
+        min-height: 100vh;
+        width: 100%;
+        background:
+          linear-gradient(to bottom right, #737376 0%, #d7d6dc 50%) bottom right / 50%
+            50% no-repeat,
+          linear-gradient(to bottom left, #737376 0%, #d7d6dc 50%) bottom left / 50%
+            50% no-repeat,
+          linear-gradient(to top left, #737376 0%, #d7d6dc 50%) top left / 50% 50%
+            no-repeat,
+          linear-gradient(to top right, #737376 0%, #d7d6dc 50%) top right / 50% 50%
+            no-repeat;
+        padding: 27px;
+        position: relative;
+      }
+
+      /* Back button container */
+      .back-button-container {
+        display: flex;
+        width: 117px;
+        height: 55px;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 27px;
+        left: 27px;
+        z-index: 100;
+      }
+
+      .header {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      .back-button {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 15px;
+        transition: all 0.3s ease;
+      }
+
+      .back-button:hover {
+        color: #4CAF50;
+      }
+
+      .back-button .icon {
+        width: 24px;
+        height: 24px;
+        transition: all 0.3s ease;
+      }
+
+      .back-button:hover .icon {
+        stroke: #4CAF50;
+      }
+
+      .back-button:hover rect {
+        fill: orange;
+      }
+
+      .back-button:hover text,
+      .back-button:focus text {
+        fill: white;
+      }
+      .back-button svg:hover path,
+            .back-button svg:hover text {
+              fill: white;
+            }      
+            
+
+      .back-button-svg {
+        width: 117px;
+        height: 55px;
+
+      }
+
+      /* Reset card styles */
+      .reset-card {
+        margin-left: auto;
+        margin-right: auto;
+        width: 890px;
+       
+        border-radius: 30px;
+        background: linear-gradient(180deg, #fff 0%, #999 45.26%);
+        padding: 48px;
+        display: flex;
+        justify-content: center;
+    max-width: 1125px;
+    height: 600px;
+    margin: 27px auto;
+    margin-top: 60px;
+    padding: 20px;
+    border-radius: 30px;
+
+      }
+
+      .reset-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+
+      /* Key icon */
+      .icon-container {
+        margin-bottom: 16px;
+      }
+
+      .key-icon {
+        width: 100px;
+        height: 110px;
+        color: #7a9e94;
+      }
+
+      /* Text elements */
+      .reset-title {
+        color: #162021;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 0.96px;
+        margin-bottom: 18px;
+      }
+
+      .reset-description {
+        color: #162021;
+        font-size: 16px;
+        font-weight: 300;
+        letter-spacing: 0.64px;
+        margin-bottom: 63px;
+        text-align: center;
+      }
+
+      /* Form elements */
+      .reset-form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .input-container {
+        width: 100%;
+        max-width: 505px;
+        height: 70px;
+        background-color: #d7d6dc;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        padding: 0 21px;
+      }
+
+      .email-input {
+        background-color: transparent;
+        font-size: 20px;
+        font-weight: 300;
+        font-family: "Inter", sans-serif;
+        letter-spacing: 0.8px;
+        width: 100%;
+      }
+
+      .email-input::placeholder {
+        color: #000;
+        opacity: 0.7;
+      }
+
+      /* Form validation styles */
+      .input-container.error {
+        border: 2px solid #ff3333;
+      }
+
+      .error-message {
+        color: #ff3333;
+        font-size: 14px;
+        margin-top: 8px;
+        display: none;
+        width: 100%;
+        max-width: 505px;
+        text-align: left;
+      }
+
+      .error-message.visible {
+        display: block;
+      }
+
+      .input-container.success {
+        border: 2px solid #4caf50;
+      }
+
+      /* Button container and button */
+      .button-container {
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .reset-button {
+width: 320px;
+    height: 70px;
+    margin: 0 auto;
+    margin-top: -40px;
+    border-radius: 25px;
+    border: 1px solid #162021;
+    /* box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.25); */
+    color: white;
+    border: none;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    /* letter-spacing: 0.96px; */
+    cursor: pointer;
+    background-color: #8cb3a9;
+    transition: all 0.3s ease;
+      }
+
+      .reset-button:hover {
+        background-color: #7a9e94;
+    transform: translateY(-2px);
+      }
+
+      /* Responsive styles */
+      @media (max-width: 991px) {
+        .password-reset-container {
+          padding: 20px;
+        }
+
+        .reset-card {
+          width: 100%;
+          height: auto;
+          padding: 32px;
+        }
+
+        .back-button-container {
+          top: 20px;
+          left: 20px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .password-reset-container {
+          padding: 16px;
+        }
+
+        .reset-card {
+          padding: 24px;
+        }
+
+        .back-button-container {
+          top: 16px;
+          left: 16px;
+        }
+
+        .reset-title {
+          font-size: 20px;
+        }
+
+        .reset-description {
+          font-size: 14px;
+          margin-bottom: 40px;
+        }
+
+        .input-container {
+          height: 90px;
+        }
+
+        .email-input {
+          font-size: 16px;
+        }
+
+        .button-container {
+          margin-top: 60px;
+        }
+
+        .reset-button {
+          width: 220px;
+          height: 60px;
+          font-size: 20px;
+        }
+      }

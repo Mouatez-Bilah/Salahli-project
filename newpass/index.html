@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="newpass.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="newpass.js"></script>
+    <title>new password</title>
+</head>
+<body>
+    
+    <div class="header">
+        <button class="back-button">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Back
+        </button>
+    </div>
+    <main class="page-container">
+         
+  
+        <section class="password-card">
+          <svg
+            width="92"
+            height="92"
+            viewBox="0 0 92 92"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="lock-icon"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M11.5 46C11.5 42.95 12.7116 40.0249 14.8683 37.8683C17.0249 35.7116 19.95 34.5 23 34.5H69C72.05 34.5 74.9751 35.7116 77.1317 37.8683C79.2884 40.0249 80.5 42.95 80.5 46V72.8333C80.5 75.8833 79.2884 78.8084 77.1317 80.9651C74.9751 83.1217 72.05 84.3333 69 84.3333H23C19.95 84.3333 17.0249 83.1217 14.8683 80.9651C12.7116 78.8084 11.5 75.8833 11.5 72.8333V46ZM49.8333 53.6667C49.8333 52.65 49.4295 51.675 48.7106 50.9561C47.9917 50.2372 47.0167 49.8333 46 49.8333C44.9833 49.8333 44.0083 50.2372 43.2894 50.9561C42.5705 51.675 42.1667 52.65 42.1667 53.6667V65.1667C42.1667 66.1833 42.5705 67.1584 43.2894 67.8772C44.0083 68.5961 44.9833 69 46 69C47.0167 69 47.9917 68.5961 48.7106 67.8772C49.4295 67.1584 49.8333 66.1833 49.8333 65.1667V53.6667Z"
+              fill="#88A6A1"
+            ></path>
+            <path
+              d="M30.667 38.3333V26.8333C30.667 22.7667 32.2825 18.8666 35.158 15.991C38.0336 13.1155 41.9337 11.5 46.0003 11.5C50.067 11.5 53.9671 13.1155 56.8426 15.991C59.7182 18.8666 61.3337 22.7667 61.3337 26.8333V38.3333"
+              stroke="#88A6A1"
+              stroke-width="4.16667"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+  
+          <h1 class="page-title">Create new password</h1>
+          <p class="page-subtitle">please make new password</p>
+  
+          <form id="passwordForm" novalidate>
+            <input type="hidden" id="token" name="token" value="" />
+            <div class="password-input-container">
+              <input
+                type="password"
+                id="newPassword"
+                placeholder="new Password"
+                class="password-input"
+                aria-label="New password"
+                required
+              />
+              <div class="eye-icon-container" data-for="newPassword">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 442 115"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="eye-icon"
+                >
+                  <g opacity="0.7">
+                    <path
+                      d="M389.167 51.2396C387.274 51.2396 385.459 51.779 384.12 52.7392C382.782 53.6994 382.03 55.0017 382.03 56.3596C382.03 57.7175 382.782 59.0198 384.12 59.98C385.459 60.9401 387.274 61.4796 389.167 61.4796C391.059 61.4796 392.875 60.9401 394.213 59.98C395.551 59.0198 396.303 57.7175 396.303 56.3596C396.303 55.0017 395.551 53.6994 394.213 52.7392C392.875 51.779 391.059 51.2396 389.167 51.2396ZM389.167 64.8929C386.012 64.8929 382.987 63.9939 380.756 62.3935C378.526 60.7932 377.273 58.6228 377.273 56.3596C377.273 54.0964 378.526 51.9259 380.756 50.3256C382.987 48.7253 386.012 47.8262 389.167 47.8262C392.321 47.8262 395.346 48.7253 397.577 50.3256C399.807 51.9259 401.061 54.0964 401.061 56.3596C401.061 58.6228 399.807 60.7932 397.577 62.3935C395.346 63.9939 392.321 64.8929 389.167 64.8929ZM389.167 43.5596C377.273 43.5596 367.115 48.8673 363 56.3596C367.115 63.8518 377.273 69.1596 389.167 69.1596C401.061 69.1596 411.218 63.8518 415.333 56.3596C411.218 48.8673 401.061 43.5596 389.167 43.5596Z"
+                      fill="#162021"
+                    ></path>
+                    <line
+                      y1="-0.5"
+                      x2="53.4546"
+                      y2="-0.5"
+                      transform="matrix(0.801019 0.598639 -0.823559 0.56723 367.758 41)"
+                      stroke="black"
+                    ></line>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="error-message" id="newPasswordError"></div>
+  
+            <div class="password-input-container">
+              <input
+                type="password"
+                id="confirmPassword"
+                placeholder="confirm"
+                class="password-input"
+                aria-label="Confirm password"
+                required
+              />
+              <div class="eye-icon-container" data-for="confirmPassword">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 442 115"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="eye-icon"
+                >
+                  <g opacity="0.7">
+                    <path
+                      d="M389.167 51.2396C387.274 51.2396 385.459 51.779 384.12 52.7392C382.782 53.6994 382.03 55.0017 382.03 56.3596C382.03 57.7175 382.782 59.0198 384.12 59.98C385.459 60.9401 387.274 61.4796 389.167 61.4796C391.059 61.4796 392.875 60.9401 394.213 59.98C395.551 59.0198 396.303 57.7175 396.303 56.3596C396.303 55.0017 395.551 53.6994 394.213 52.7392C392.875 51.779 391.059 51.2396 389.167 51.2396ZM389.167 64.8929C386.012 64.8929 382.987 63.9939 380.756 62.3935C378.526 60.7932 377.273 58.6228 377.273 56.3596C377.273 54.0964 378.526 51.9259 380.756 50.3256C382.987 48.7253 386.012 47.8262 389.167 47.8262C392.321 47.8262 395.346 48.7253 397.577 50.3256C399.807 51.9259 401.061 54.0964 401.061 56.3596C401.061 58.6228 399.807 60.7932 397.577 62.3935C395.346 63.9939 392.321 64.8929 389.167 64.8929ZM389.167 43.5596C377.273 43.5596 367.115 48.8673 363 56.3596C367.115 63.8518 377.273 69.1596 389.167 69.1596C401.061 69.1596 411.218 63.8518 415.333 56.3596C411.218 48.8673 401.061 43.5596 389.167 43.5596Z"
+                      fill="#162021"
+                    ></path>
+                    <line
+                      y1="-0.5"
+                      x2="53.4546"
+                      y2="-0.5"
+                      transform="matrix(0.801019 0.598639 -0.823559 0.56723 367.758 41)"
+                      stroke="black"
+                    ></line>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="error-message" id="confirmPasswordError"></div>
+  
+            <button type="submit" class="save-button" id="saveButton" disabled>
+              Save
+            </button>
+          </form>
+        </section>
+      </main>
+</body>
+</html>

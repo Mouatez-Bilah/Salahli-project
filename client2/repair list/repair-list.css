@@ -1,0 +1,281 @@
+:root {
+    --bodybackground: #e6e9ec;
+    --button-color: #8cb3a9;
+    --title-color: #2c5545;
+    --main-font: Arial, sans-serif;
+    --title-font-size: 48px;
+    --subtitle-font-size: 20px;
+    --subtitle-font-color: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+}
+
+body {
+    background-color: var(--bodybackground);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.header {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--subtitle-font-color);
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    color: var(--button-color);
+}
+
+.back-btn .icon {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+}
+
+.containt {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main-title {
+    font-size: var(--title-font-size);
+    color: var(--title-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: var(--subtitle-font-size);
+    color: var(--subtitle-font-color);
+}
+
+.filter-section {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.filter-by-rate {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    color: #555;
+}
+
+.rate-filter-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.rate-filter-btn .icon {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    fill: none; /* Ensure star is outlined by default */
+}
+
+.filter-icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    color: #555;
+    cursor: pointer;
+}
+
+.filter-icon .icon {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+}
+
+.repairers-list-container {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.repairer-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.repairer-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-right: 20px;
+    border: 2px solid #8cb3a9;
+}
+
+.repairer-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.repairer-info {
+    flex-grow: 1;
+}
+
+.repairer-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.repairer-rating {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-bottom: 5px;
+}
+
+.star-icon {
+    width: 16px;
+    height: 16px;
+    fill: #ffc107; /* Gold color for stars */
+    stroke: #ffc107;
+}
+
+.repairer-phone {
+    font-size: 14px;
+    color: #666;
+}
+
+.repairer-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.profile-btn,
+.select-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.profile-btn {
+    background-color: #555;
+    color: white;
+}
+
+.profile-btn:hover {
+    background-color: #333;
+}
+
+.select-btn {
+    background-color: var(--button-color);
+    color: white;
+}
+
+.select-btn:hover {
+    background-color: #7a9e94;
+}
+
+.loading-spinner,
+.error-message {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.loading-spinner {
+    color: var(--button-color);
+}
+
+.error-message {
+    color: #ff3b30; /* Red color for errors */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .main-title {
+        font-size: 36px;
+    }
+
+  
+    .subtitle {
+        font-size: 18px;
+    }
+
+    .filter-section,
+    .repairers-list-container {
+        max-width: 95%;
+    }
+
+    .repairer-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .repairer-info {
+        text-align: center;
+    }
+
+    .repairer-actions {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    /* ... other styles ... */
+}
+
+.repair-image-container {
+    width: 100%;
+    max-width: 400px; /* Adjust as needed */
+    /* ... other styles ... */
+} 

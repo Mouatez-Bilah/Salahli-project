@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Reditprofile.css">
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="normz.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Reditprofile</title>
+</head>
+<body>
+    <button class="back-btn" onclick="window.history.back()">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7"></path>
+        </svg>
+        Back
+    </button>
+
+    <div class="container">
+        <form id="editProfileForm">
+            <div class="form-grid">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="username" placeholder="User name" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="text" class="form-control" id="address" placeholder="Address" required>
+                </div>
+                
+                <div class="form-group password-container">
+                    <div class="password-verify-wrapper">
+                        <input type="password" class="form-control" id="password" placeholder="Current Pass"  required>
+                        <div class="password-actions">
+                            <button type="button" class="toggle-password" data-target="password" onclick="pass_text(event)">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                            <button type="button" class="verify-btn" onclick="verifyPassword()">
+                                <i style="margin-left: -9px;" class="fa-solid fa-check"></i>
+                                <span >Verify</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="verification-status"></div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" class="form-control" id="email" placeholder="Gmail" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="text" class="form-control" id="skills" placeholder="Skills">
+                </div>
+                
+                <div class="form-group password-container">
+                    <div class="password-verify-wrapper">
+                        <input type="password" class="form-control" id="newPassword" placeholder="New Password">
+                        <div class="password-actions">
+                            <button type="button" class="toggle-password" data-target="newPassword" onclick="pass_text(event)">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="tel" class="form-control" id="phone" placeholder="Phone number">
+                </div>
+                
+                <div class="form-group">
+                    <input type="text" class="form-control" id="workingHours" placeholder="Working hours">
+                </div>
+                
+                <div class="form-group password-container">
+                    <div class="password-verify-wrapper">
+                        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm">
+                        <div class="password-actions">
+                            <button type="button" class="toggle-password" data-target="confirmPassword" onclick="pass_text(event)">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-con">
+                <button type="submit" class="save-btn" style="background-color: rgb(224 0 0);">cancel</button>
+                <button type="submit" class="save-btn">Save</button>
+            </div>
+        
+        </form>
+    </div>
+    <script src="Reditprofile.js"></script>
+</body>
+</html>

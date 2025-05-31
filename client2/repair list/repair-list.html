@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose a Repairer</title>
+    <link rel="stylesheet" href="repair-list.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <button class="back-btn">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"></path>
+            </svg>
+            Back
+        </button>
+    </div>
+
+    <div class="containt">
+        <div class="title-section">
+            <h1 class="main-title">Choose a repairer</h1>
+            <p class="subtitle">Select one from the list of repairer below</p>
+        </div>
+
+        <div class="filter-section">
+            <div class="filter-by-rate">
+                <span>By Rate</span>
+                <button class="rate-filter-btn">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+            <div class="filter-icon">
+                Filter
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                </svg>
+            </div>
+        </div>
+
+        <div class="repairers-list-container">
+            <!-- Repairer cards will be loaded here -->
+            <div class="loading-spinner"></div>
+            <div class="error-message"></div>
+        </div>
+    </div>
+    <script src="repair-list.js"></script>
+</body>
+</html> 

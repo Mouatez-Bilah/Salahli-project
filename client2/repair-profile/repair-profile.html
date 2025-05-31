@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repair Profile</title>
+    <link rel="stylesheet" href="repair-profile.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="repair-profile.js"></script>
+</head>
+<body>
+    <div class="header">
+        <button class="back-button" onclick="goBack()">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Back
+        </button>
+        <h1 class="title">Repair Profile</h1>
+    </div>
+    
+    <div class="profile-card">
+        <div>
+            <img class="profile-picture" src="../images/vecteezy_a-man-in-a-red-hat-and-overalls-is-standing-in-front-of-a_54977362.jpg" alt="Repairer profile picture">
+        </div>
+        
+        <div class="profile-name" id="repairer-name">Name</div>
+        
+        <div class="rating">
+            <div class="rating-score" id="average-rating">5.0</div>
+            <div class="stars" id="rating-stars">
+                <div class="star">★</div>
+                <div class="star">★</div>
+                <div class="star">★</div>
+                <div class="star">★</div>
+                <div class="star">★</div>
+            </div>
+        </div>
+        
+        <div class="profile-info">
+            <div class="info-item">
+                <span class="info-label">Email:</span>
+                <span class="info-value" id="email">exemple@gmail.com</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Phone Number:</span>
+                <span class="info-value" id="phone-number">phone number</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Address:</span>
+                <span class="info-value" id="address">Not Set</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Skills:</span>
+                <span class="info-value" id="skills">laptop & phone repairer</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Working Hours:</span>
+                <span class="info-value">9AM - 6PM</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

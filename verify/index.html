@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="verify.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="verify.js"></script>
+    <title>verify</title>
+</head>
+<body>
+    <main class="verification-container">
+        <section class="verification-card">
+          <div class="back-button-container">
+            <button class="back-button"  onclick="window.location.href='../page3/forgot-password.html'">
+              <span class="back-button-content">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="back-icon"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  style="width: 24px;height: 24px"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l14 0"></path>
+                  <path d="M5 12l6 6"></path>
+                  <path d="M5 12l6 -6"></path>
+                </svg>
+                <span>Back</span>
+              </span>
+            </button>
+          </div>
+  
+          <div class="verification-content">
+            <div class="verification-icon">
+              <svg
+                width="106"
+                height="70"
+                viewBox="0 0 106 70"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="verification-badge"
+              >
+                <path
+                  d="M69.1099 2.12929C70.7014 1.89258 72.3674 1.98242 73.8764 2.38634C75.3854 2.79025 76.6627 3.4882 77.5307 4.38327L85.3462 12.4579C85.9763 13.1083 86.8257 13.658 87.8307 14.0657L100.309 19.1232C101.695 19.6846 102.776 20.5116 103.402 21.4892C104.027 22.4668 104.166 23.5464 103.8 24.5775L100.497 33.8581C100.231 34.6081 100.231 35.3875 100.497 36.1375L103.8 45.4231C104.163 46.4528 104.022 47.5301 103.396 48.5056C102.771 49.4811 101.692 50.3065 100.309 50.8673L87.8307 55.9298C86.8257 56.3376 85.9763 56.8873 85.3462 57.5376L77.5307 65.6123C76.6637 66.5083 75.387 67.2073 73.8779 67.6121C72.3688 68.017 70.7023 68.1076 69.1099 67.8713L54.7607 65.7344C53.6042 65.5628 52.4027 65.5628 51.2462 65.7344L36.8969 67.8713C35.3046 68.1076 33.6381 68.017 32.129 67.6121C30.6199 67.2073 29.3431 66.5083 28.4761 65.6123L20.6607 57.5376C20.0283 56.8867 19.1762 56.337 18.1683 55.9298L5.69824 50.8723C4.31365 50.3113 3.23349 49.4851 2.60786 48.5085C1.98224 47.5319 1.84222 46.4535 2.20726 45.4231L5.50168 36.1375C5.76807 35.3875 5.76807 34.6081 5.50168 33.8581L2.1994 24.5775C1.83334 23.5458 1.97366 22.4659 2.60082 21.4883C3.22797 20.5106 4.31072 19.6839 5.69824 19.1232L18.1683 14.0657C19.1762 13.6586 20.0283 13.1089 20.6607 12.4579L28.4761 4.38327C29.3437 3.48917 30.6197 2.79186 32.1271 2.388C33.6345 1.98414 35.2987 1.89372 36.8891 2.12929L51.2462 4.26116C52.4027 4.43277 53.6042 4.43277 54.7607 4.26116L69.1099 2.12929Z"
+                  stroke="#88A6A1"
+                  stroke-width="2.08333"
+                ></path>
+              </svg>
+              <svg
+                width="51"
+                height="41"
+                viewBox="0 0 51 41"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="verification-checkmark"
+              >
+                <path
+                  d="M2 24.4903L21.2445 39L49 2"
+                  stroke="#88A6A1"
+                  stroke-width="2.08333"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </div>
+  
+            <div class="verification-text">
+              <h1 class="verification-title">Verify you email or phone number</h1>
+              <p class="verification-subtitle">
+                please enter the 4 digit number send to your email or phone number
+              </p>
+            </div>
+  
+            <div class="verification-code-inputs">
+              <input
+                type="text"
+                maxlength="1"
+                class="code-input"
+                aria-label="First digit"
+              />
+              <input
+                type="text"
+                maxlength="1"
+                class="code-input"
+                aria-label="Second digit"
+              />
+              <input
+                type="text"
+                maxlength="1"
+                class="code-input"
+                aria-label="Third digit"
+              />
+              <input
+                type="text"
+                maxlength="1"
+                class="code-input"
+                aria-label="Fourth digit"
+              />
+            </div>
+  
+            <p class="error-message" id="validation-error">
+              Please enter all 4 digits of the verification code
+            </p>
+            <button class="verify-button" id="verify-btn" disabled>Verify</button>
+          </div>
+        </section>
+      </main>
+  
+</body>
+</html>

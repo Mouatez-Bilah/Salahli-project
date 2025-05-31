@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track My Repair</title>
+  <!-- Include Tailwind CSS directly from CDN -->
+  <link rel="stylesheet" href="../../../output.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            teal: {
+              700: '#2c7a7b',
+            },
+            blue: {
+              500: '#3b82f6',
+            },
+          }
+        }
+      }
+    }
+  </script>
+  <script src="./script.js" defer></script>
+</head>
+<body class="bg-gray-200 m-0 p-0 overflow-hidden">
+  <div class="h-screen flex flex-col">
+    <!-- Back button -->
+    <div class="p-4">
+      <button class="flex items-center text-gray-600 hover:text-gray-800">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+          <path d="M19 12H5"></path>
+          <path d="M12 19l-7-7 7-7"></path>
+        </svg>
+        <span>Back</span>
+      </button>
+    </div>
+
+    <!-- Main content - exact height to fill screen -->
+    <div class="flex-1 mx-4 mb-4 bg-white rounded-lg shadow-sm overflow-hidden flex flex-col">
+      <!-- Header -->
+      <div class="text-center py-6 bg-white">
+        <h1 class="text-3xl font-bold text-teal-700 font-serif">Track my repair</h1>
+        <p class="text-sm text-gray-500">Check the status of your request here</p>
+      </div>
+
+      <!-- Blue separator line -->
+      <div class="h-0.5 bg-blue-500 w-full"></div>
+
+      <!-- Content area with fixed layout -->
+      <div class="flex flex-col md:flex-row flex-1">
+        <!-- Status section -->
+        <div class="p-8 md:w-1/2 flex flex-col items-center justify-center bg-white">
+          <!-- Rejected status icon -->
+          <div id="status-icon-placeholder" class="w-16 h-16 mb-6 flex items-center justify-center">
+            <!-- Placeholder until image loads -->
+            <div class="text-center text-gray-400">Loading...</div>
+          </div>
+          <p id="status-message" class="text-center text-gray-700">
+            Your request has been rejected by the selected repairer. We appreciate your understanding, you can choose another repairer.
+          </p>
+        </div>
+
+        <!-- Image section - full height with rounded corners -->
+        <div class="md:w-1/2 flex-1 overflow-hidden">
+          <div id="repair-image-placeholder" class="h-full w-full rounded-lg overflow-hidden">
+            <!-- Placeholder until image loads -->
+            <div class="text-center text-gray-400 h-full flex items-center justify-center">Loading...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../../js/tracker pages/2tracker.js"></script>
+</body>
+</html>

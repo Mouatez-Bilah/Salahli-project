@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forgetpass.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="forgetpass.js"></script>
+    <title>Forget-password</title>
+</head>
+<body>
+    <body>
+        <main class="password-reset-container">
+          <div class="header">
+            <button class="back-button">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+              </svg>
+              Back
+            </button>
+          </div>
+    
+          <section class="reset-card">
+            <div class="reset-content">
+              <div class="icon-container">
+                <svg
+                  width="100"
+                  height="110"
+                  viewBox="0 0 100 110"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="key-icon"
+                >
+                  <path
+                    d="M99.7595 35.5454C98.926 26.4184 95.1983 17.9054 89.2301 11.4993L88.6901 11.0153C84.3908 6.41769 79.1 3.09724 73.3144 1.36556C67.5287 -0.366125 61.438 -0.452245 55.6138 1.11528C49.7897 2.6828 44.4231 5.85257 40.0177 10.3271C35.6124 14.8016 32.3127 20.434 30.4285 26.6959C27.9053 35.0845 28.0428 44.1665 30.8185 52.458L1.07022 85.3098C0.730653 85.683 0.46136 86.1264 0.277763 86.6143C0.0941665 87.1022 -0.000127375 87.6252 0.000282901 88.1533V105.973C-0.00574573 106.503 0.0846338 107.03 0.266107 107.521C0.447579 108.012 0.716482 108.458 1.057 108.833C1.39752 109.208 1.80278 109.505 2.24895 109.705C2.69513 109.905 3.1732 110.005 3.65507 109.999H19.8991C20.4277 110.009 20.9517 109.891 21.434 109.653C21.9163 109.414 22.3449 109.062 22.6895 108.621C23.0341 108.18 23.2862 107.661 23.4278 107.101C23.5694 106.541 23.5971 105.953 23.5089 105.379L22.774 100.017L27.3087 100.82C27.8842 100.929 28.4751 100.889 29.0341 100.703C29.5931 100.517 30.1048 100.19 30.5285 99.7474L38.673 90.7823C39.0857 90.3344 39.394 89.7834 39.5715 89.1763C39.7491 88.5692 39.7908 87.9239 39.693 87.2953L38.913 81.9272L43.7927 82.7303C44.3645 82.8325 44.9502 82.7836 45.5014 82.5876C46.0526 82.3915 46.5534 82.0539 46.9626 81.6027L52.3722 75.5912C58.0042 77.8915 64.0767 78.5725 70.0148 77.5696C75.9529 76.5667 81.56 73.9131 86.3053 69.8602C91.0529 65.8067 94.7843 60.4903 97.1477 54.4118C99.5112 48.3333 100.429 41.693 99.8145 35.1164L99.7595 35.5454ZM77.1358 48.5915C75.0518 50.9402 72.3655 52.5329 69.4362 53.1566C68.4715 53.3683 67.4902 53.4752 66.5064 53.4756C64.5361 53.4707 62.5847 53.0525 60.7568 52.2435C58.0113 50.9824 55.6688 48.8516 54.0271 46.122C52.3529 43.4168 51.467 40.215 51.4873 36.9424C51.4874 33.678 52.3677 30.487 54.0168 27.7731C55.6659 25.0592 58.0098 22.9444 60.7518 21.6963C63.5025 20.4628 66.5222 20.1461 69.4353 20.7856C72.3484 21.4252 75.0262 22.9927 77.1358 25.2934C79.918 28.3982 81.4777 32.5827 81.4777 36.9424C81.4777 41.3022 79.918 45.4867 77.1358 48.5915Z"
+                    fill="#88A6A1"
+                  ></path>
+                </svg>
+              </div>
+    
+              <h1 class="reset-title">Forgot password?</h1>
+              <p class="reset-description">
+                no worries, we'll send you reset instructions
+              </p>
+    
+              <form class="reset-form" id="resetForm" novalidate>
+                <div class="input-container" id="inputContainer">
+                  <input
+                    type="text"
+                    placeholder="Email or phone number"
+                    class="email-input"
+                    id="emailInput"
+                    aria-label="Email or phone number"
+                  />
+                </div>
+                <p class="error-message" id="errorMessage">
+                  Please enter a valid email address or phone number
+                </p>
+    
+                <div class="button-container">
+                  <button type="submit" class="reset-button">
+                    Reset your password
+                  </button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </main>
+</body>
+</html>

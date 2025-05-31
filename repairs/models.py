@@ -11,6 +11,7 @@ def validate_image_size(value):
 
 class User(AbstractUser):
     phone_number = models.CharField(max_length=15, blank=True, null=True)
+    password_reset_token = models.CharField(max_length=100, blank=True, null=True)
     user_type = models.CharField(
         max_length=10,
         choices=[('repair', 'Repair'), ('client', 'Client')],
@@ -21,8 +22,18 @@ class User(AbstractUser):
         return self.username
 
 class RepairProfile(models.Model):
+    SKILL_CHOICES = [
+        ('laptop', 'Laptop Repair'),
+        ('phone', 'Phone Repair'),
+        ('tablet', 'Tablet Repair'),
+        ('printer', 'Printer Repair'),
+        ('other', 'Other')
+    ]
+    
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='repair_profile')
-    skills = models.TextField()
+    skills = models.CharField(max_length=255, blank=True, null=True, help_text="Main repair skill")
+    custom_skills = models.TextField(blank=True, null=True, help_text="Additional skills or specializations")
+    address = models.TextField(blank=True, null=True)
     average_rating = models.FloatField(default=0.0)
     
     def __str__(self):
